@@ -14,6 +14,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     CommonModule,
     SharedRoutingModule
+  ],
+  exports: [
+    NavbarComponent
   ]
 })
 export class SharedModule { }

@@ -11,7 +11,7 @@
             <form [formGroup]="frmUsuario" (ngSubmit)="crearUsuario()">
                 <div class="form-group">
                     <label for="nombre">Usuario: </label>
-                    <input type="text" class="form-control" formControlName="userNameColaborador" [ngClass]="{'is-invalid': frmUsuario.get('userNameColaborador')?.touched &&
+                    <input type="text" class="form-control" style="margin-top: 10px;" formControlName="userNameColaborador" [ngClass]="{'is-invalid': frmUsuario.get('userNameColaborador')?.touched &&
                                         frmUsuario.get('userNameColaborador')?.invalid}"
                         placeholder="Nombre del usuario">
                     <span class="invalid-feedback">
@@ -25,14 +25,18 @@
                 </div>
                 <div class="form-group"  style="margin-top: 10px;">
                     <label for="contraseña">Contraseña: </label>
-                    <input type="password" class="form-control" formControlName="passwordUser"
+                    <input type="password" class="form-control" style="margin-top: 10px;" formControlName="passwordUser"
                         placeholder="contraseña del usuario" [ngClass]="{'is-invalid': frmUsuario.get('passwordUser')?.touched &&
                                         frmUsuario.get('passwordUser')?.invalid}">
                     <span class="invalid-feedback" *ngIf="frmUsuario.get('passwordUser')?.errors?.required">
                         La contraseña es requerida
                     </span>
                 </div>
+                <div style="margin-top: 10px;">
+                    Rol:
+                </div>
                 <div class="form-check form-check-inline" style="margin-top: 10px;">
+                   
                     <input class="form-check-input" type="radio" formControlName="rolUsuario"
                         (click)="selectRolUsuario('adm')" value="adm">
                     <label class="form-check-label" for="administrador">Administrador</label>

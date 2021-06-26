@@ -4,20 +4,22 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    UsuarioComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     PagesRoutingModule,
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
     SharedModule,
     //HttpClientModule
   ]

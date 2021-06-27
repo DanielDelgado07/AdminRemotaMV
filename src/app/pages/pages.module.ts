@@ -8,6 +8,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ComandosComponent } from './comandos/comandos.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -15,7 +22,8 @@ import { ComandosComponent } from './comandos/comandos.component';
     HomeComponent,
     InicioComponent,
     UsuarioComponent,
-    ComandosComponent
+    ComandosComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +31,12 @@ import { ComandosComponent } from './comandos/comandos.component';
     PagesRoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
     //HttpClientModule
   ]
 })
